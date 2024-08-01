@@ -34,7 +34,7 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.INFO,
-      page: () => const InfoView(),
+      page: () => InfoView(),
       binding: InfoBinding(),
     ),
   ];

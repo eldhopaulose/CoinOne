@@ -79,6 +79,24 @@ class AdMobServices {
     return null;
   }
 
+  // Add native ad unit ID
+  String? get nativeAdUnitId {
+    if (kReleaseMode) {
+      if (Platform.isIOS) {
+        return 'ca-app-pub-3940256099942544/2247696110'; // Replace with your actual iOS native ad unit ID
+      } else if (Platform.isAndroid) {
+        return 'ca-app-pub-3940256099942544/2247696110'; // Replace with your actual Android native ad unit ID
+      }
+    } else {
+      if (Platform.isIOS) {
+        return 'ca-app-pub-3940256099942544/2247696110'; // Replace with your actual iOS native ad unit ID
+      } else if (Platform.isAndroid) {
+        return 'ca-app-pub-3940256099942544/2247696110'; // Replace with your actual Android native ad unit ID
+      }
+    }
+    return null;
+  }
+
   final BannerAdListener bannerAdListener = BannerAdListener(
     onAdLoaded: (Ad ad) => print("Ad Loaded"),
     onAdFailedToLoad: (Ad ad, LoadAdError error) {
